@@ -1,0 +1,56 @@
+Last login: Wed Dec  7 12:22:48 on console
+Juliets-MacBook-Air:~ juliet$ 
+Juliets-MacBook-Air:~ juliet$ ls
+Applications	Downloads	Library		Pictures
+Desktop		Dropbox		Movies		Public
+Documents	Google Drive	Music		lib
+Juliets-MacBook-Air:~ juliet$ virtualenv env
+-bash: virtualenv: command not found
+Juliets-MacBook-Air:~ juliet$ pip install virtualenv
+-bash: pip: command not found
+Juliets-MacBook-Air:~ juliet$ 
+Juliets-MacBook-Air:~ juliet$ ls
+Applications	Downloads	Library		Pictures
+Desktop		Dropbox		Movies		Public
+Documents	Google Drive	Music		lib
+Juliets-MacBook-Air:~ juliet$ source env/bin/activate
+-bash: env/bin/activate: No such file or directory
+Juliets-MacBook-Air:~ juliet$ 
+Juliets-MacBook-Air:~ juliet$ pip install django
+-bash: pip: command not found
+Juliets-MacBook-Air:~ juliet$ pip freeze > requirements.txt
+-bash: pip: command not found
+Juliets-MacBook-Air:~ juliet$ django-admin startproject project
+-bash: django-admin: command not found
+Juliets-MacBook-Air:~ juliet$ cd project/
+-bash: cd: project/: No such file or directory
+Juliets-MacBook-Air:~ juliet$ ls
+Applications		Google Drive		Public
+Desktop			Library			lib
+Documents		Movies			requirements.txt
+Downloads		Music
+Dropbox			Pictures
+Juliets-MacBook-Air:~ juliet$ ls manage.py
+ls: manage.py: No such file or directory
+Juliets-MacBook-Air:~ juliet$ cd project
+-bash: cd: project: No such file or directory
+Juliets-MacBook-Air:~ juliet$ ls
+Applications		Google Drive		Public
+Desktop			Library			lib
+Documents		Movies			requirements.txt
+Downloads		Music
+Dropbox			Pictures
+Juliets-MacBook-Air:~ juliet$ cd..
+-bash: cd..: command not found
+Juliets-MacBook-Air:~ juliet$ ls
+Applications		Google Drive		Public
+Desktop			Library			lib
+Documents		Movies			requirements.txt
+Downloads		Music
+Dropbox			Pictures
+Juliets-MacBook-Air:~ juliet$ py3 manage.py runserver
+-bash: py3: command not found
+Juliets-MacBook-Air:~ juliet$ py manage.py startapp posts 
+-bash: py: command not found
+Juliets-MacBook-Air:~ juliet$ py3 manage.py startapp posts
+

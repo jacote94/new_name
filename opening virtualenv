@@ -1,0 +1,292 @@
+Last login: Wed Feb  1 19:38:43 on ttys000
+Juliets-MacBook-Air:~ juliet$ easy_install
+error: can't create or remove files in install directory
+
+The following error occurred while trying to add or remove files in the
+installation directory:
+
+    [Errno 13] Permission denied: '/Library/Python/2.7/site-packages/test-easy-install-93738.pth'
+
+The installation directory you specified (via --install-dir, --prefix, or
+the distutils default setting) was:
+
+    /Library/Python/2.7/site-packages/
+
+Perhaps your account does not have write access to this directory?  If the
+installation directory is a system-owned directory, you may need to sign in
+as the administrator or "root" account.  If you do not have administrative
+access to this machine, you may wish to choose a different installation
+directory, preferably one that is listed in your PYTHONPATH environment
+variable.
+
+For information on other options, you may wish to consult the
+documentation at:
+
+  https://pythonhosted.org/setuptools/easy_install.html
+
+Please make the appropriate changes for your system and try again.
+
+Juliets-MacBook-Air:~ juliet$ sudo easy_install
+Password:
+error: No urls, filenames, or requirements specified (see --help)
+Juliets-MacBook-Air:~ juliet$ sudo easyinstall_pip
+sudo: easyinstall_pip: command not found
+Juliets-MacBook-Air:~ juliet$ sudo easy_install pip
+Searching for pip
+Reading https://pypi.python.org/simple/pip/
+Best match: pip 9.0.1
+Downloading https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz#md5=35f01da33009719497f01a4ba69d63c9
+Processing pip-9.0.1.tar.gz
+Writing /tmp/easy_install-Je3Bp1/pip-9.0.1/setup.cfg
+Running pip-9.0.1/setup.py -q bdist_egg --dist-dir /tmp/easy_install-Je3Bp1/pip-9.0.1/egg-dist-tmp-gYXBKG
+/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/distutils/dist.py:267: UserWarning: Unknown distribution option: 'python_requires'
+  warnings.warn(msg)
+warning: no previously-included files found matching '.coveragerc'
+warning: no previously-included files found matching '.mailmap'
+warning: no previously-included files found matching '.travis.yml'
+warning: no previously-included files found matching '.landscape.yml'
+warning: no previously-included files found matching 'pip/_vendor/Makefile'
+warning: no previously-included files found matching 'tox.ini'
+warning: no previously-included files found matching 'dev-requirements.txt'
+warning: no previously-included files found matching 'appveyor.yml'
+no previously-included directories found matching '.github'
+no previously-included directories found matching '.travis'
+no previously-included directories found matching 'docs/_build'
+no previously-included directories found matching 'contrib'
+no previously-included directories found matching 'tasks'
+no previously-included directories found matching 'tests'
+Adding pip 9.0.1 to easy-install.pth file
+Installing pip script to /usr/local/bin
+Installing pip2.7 script to /usr/local/bin
+Installing pip2 script to /usr/local/bin
+
+Installed /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg
+Processing dependencies for pip
+Finished processing dependencies for pip
+Juliets-MacBook-Air:~ juliet$ pip
+
+Usage:   
+  pip <command> [options]
+
+Commands:
+  install                     Install packages.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  check                       Verify installed packages have compatible dependencies.
+  search                      Search PyPI for packages.
+  wheel                       Build wheels from your requirements.
+  hash                        Compute hashes of package archives.
+  completion                  A helper command used for command completion.
+  help                        Show help for commands.
+
+General Options:
+  -h, --help                  Show help.
+  --isolated                  Run pip in an isolated mode, ignoring
+                              environment variables and user configuration.
+  -v, --verbose               Give more output. Option is additive, and can be
+                              used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output. Option is additive, and can be
+                              used up to 3 times (corresponding to WARNING,
+                              ERROR, and CRITICAL logging levels).
+  --log <path>                Path to a verbose appending log.
+  --proxy <proxy>             Specify a proxy in the form
+                              [user:passwd@]proxy.server:port.
+  --retries <retries>         Maximum number of retries each connection should
+                              attempt (default 5 times).
+  --timeout <sec>             Set the socket timeout (default 15 seconds).
+  --exists-action <action>    Default action when a path already exists:
+                              (s)witch, (i)gnore, (w)ipe, (b)ackup, (a)bort.
+  --trusted-host <hostname>   Mark this host as trusted, even though it does
+                              not have valid or any HTTPS.
+  --cert <path>               Path to alternate CA bundle.
+  --client-cert <path>        Path to SSL client certificate, a single file
+                              containing the private key and the certificate
+                              in PEM format.
+  --cache-dir <dir>           Store the cache data in <dir>.
+  --no-cache-dir              Disable the cache.
+  --disable-pip-version-check
+                              Don't periodically check PyPI to determine
+                              whether a new version of pip is available for
+                              download. Implied with --no-index.
+Juliets-MacBook-Air:~ juliet$ sudo pip install virtualenv
+The directory '/Users/juliet/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/Users/juliet/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting virtualenv
+  Downloading virtualenv-15.1.0-py2.py3-none-any.whl (1.8MB)
+    100% |████████████████████████████████| 1.8MB 435kB/s 
+Installing collected packages: virtualenv
+Successfully installed virtualenv-15.1.0
+Juliets-MacBook-Air:~ juliet$ ls
+Applications		Google Drive		Public
+Desktop			Library			lib
+Documents		Movies			requirements.txt
+Downloads		Music
+Dropbox			Pictures
+Juliets-MacBook-Air:~ juliet$ virtualenv env
+New python executable in /Users/juliet/env/bin/python
+Installing setuptools, pip, wheel...done.
+Juliets-MacBook-Air:~ juliet$ ls
+Applications		Google Drive		Public
+Desktop			Library			env
+Documents		Movies			lib
+Downloads		Music			requirements.txt
+Dropbox			Pictures
+Juliets-MacBook-Air:~ juliet$ source env/bin/activate
+(env) Juliets-MacBook-Air:~ juliet$ pip install django
+Collecting django
+  Downloading Django-1.10.5-py2.py3-none-any.whl (6.8MB)
+    100% |████████████████████████████████| 6.8MB 125kB/s 
+Installing collected packages: django
+Successfully installed django-1.10.5
+(env) Juliets-MacBook-Air:~ juliet$ pip freeze > requirements.txt
+(env) Juliets-MacBook-Air:~ juliet$ subl . 
+-bash: subl: command not found
+(env) Juliets-MacBook-Air:~ juliet$ subl.
+-bash: subl.: command not found
+(env) Juliets-MacBook-Air:~ juliet$ pip freeze > requirements.txt 
+(env) Juliets-MacBook-Air:~ juliet$ subl .
+-bash: subl: command not found
+(env) Juliets-MacBook-Air:~ juliet$ ls
+Applications		Google Drive		Public
+Desktop			Library			env
+Documents		Movies			lib
+Downloads		Music			requirements.txt
+Dropbox			Pictures
+(env) Juliets-MacBook-Air:~ juliet$ mkdir Environments
+(env) Juliets-MacBook-Air:~ juliet$ sudo pip install virtualenv
+Password:
+The directory '/Users/juliet/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/Users/juliet/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Collecting virtualenv
+  Downloading virtualenv-15.1.0-py2.py3-none-any.whl (1.8MB)
+    100% |████████████████████████████████| 1.8MB 360kB/s 
+Installing collected packages: virtualenv
+Successfully installed virtualenv-15.1.0
+(env) Juliets-MacBook-Air:~ juliet$ sudo pip install virtualenv
+The directory '/Users/juliet/Library/Caches/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/Users/juliet/Library/Caches/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+Requirement already satisfied: virtualenv in ./env/lib/python2.7/site-packages
+(env) Juliets-MacBook-Air:~ juliet$ mkdir my_django_project
+(env) Juliets-MacBook-Air:~ juliet$ cd my_django_project
+(env) Juliets-MacBook-Air:my_django_project juliet$ virtualenv
+You must provide a DEST_DIR
+Usage: virtualenv [OPTIONS] DEST_DIR
+
+Options:
+  --version             show program's version number and exit
+  -h, --help            show this help message and exit
+  -v, --verbose         Increase verbosity.
+  -q, --quiet           Decrease verbosity.
+  -p PYTHON_EXE, --python=PYTHON_EXE
+                        The Python interpreter to use, e.g.,
+                        --python=python2.5 will use the python2.5 interpreter
+                        to create the new environment.  The default is the
+                        interpreter that virtualenv was installed with
+                        (/Users/juliet/env/bin/python)
+  --clear               Clear out the non-root install and start from scratch.
+  --no-site-packages    DEPRECATED. Retained only for backward compatibility.
+                        Not having access to global site-packages is now the
+                        default behavior.
+  --system-site-packages
+                        Give the virtual environment access to the global
+                        site-packages.
+  --always-copy         Always copy files rather than symlinking.
+  --unzip-setuptools    Unzip Setuptools when installing it.
+  --relocatable         Make an EXISTING virtualenv environment relocatable.
+                        This fixes up scripts and makes all .pth files
+                        relative.
+  --no-setuptools       Do not install setuptools in the new virtualenv.
+  --no-pip              Do not install pip in the new virtualenv.
+  --no-wheel            Do not install wheel in the new virtualenv.
+  --extra-search-dir=DIR
+                        Directory to look for setuptools/pip distributions in.
+                        This option can be used multiple times.
+  --download            Download preinstalled packages from PyPI.
+  --no-download, --never-download
+                        Do not download preinstalled packages from PyPI.
+  --prompt=PROMPT       Provides an alternative prompt prefix for this
+                        environment.
+  --setuptools          DEPRECATED. Retained only for backward compatibility.
+                        This option has no effect.
+  --distribute          DEPRECATED. Retained only for backward compatibility.
+                        This option has no effect.
+(env) Juliets-MacBook-Air:my_django_project juliet$ source env/bin/activate
+-bash: env/bin/activate: No such file or directory
+(env) Juliets-MacBook-Air:my_django_project juliet$ pip install django
+Requirement already satisfied: django in /Users/juliet/env/lib/python2.7/site-packages
+(env) Juliets-MacBook-Air:my_django_project juliet$ ls
+(env) Juliets-MacBook-Air:my_django_project juliet$ virtualenv env
+Using real prefix '/System/Library/Frameworks/Python.framework/Versions/2.7'
+New python executable in /Users/juliet/Desktop/Coding/How to Build a Web App Class/my_django_project/env/bin/python
+Installing setuptools, pip, wheel...done.
+(env) Juliets-MacBook-Air:my_django_project juliet$ ls
+env
+(env) Juliets-MacBook-Air:my_django_project juliet$ source env/bin/activate
+(env) Juliets-MacBook-Air:my_django_project juliet$ pip freeze > requirement.txt
+-bash: /Users/juliet/Desktop/Coding/How to Build a Web App Class/my_django_project/env/bin/pip: "/Users/juliet/Desktop/Coding/How: bad interpreter: No such file or directory
+(env) Juliets-MacBook-Air:my_django_project juliet$ subl .
+-bash: subl: command not found
+(env) Juliets-MacBook-Air:my_django_project juliet$ subl.
+-bash: subl.: command not found
+(env) Juliets-MacBook-Air:my_django_project juliet$ ls
+env		requirement.txt
+(env) Juliets-MacBook-Air:my_django_project juliet$ django-admin startproject project
+-bash: django-admin: command not found
+(env) Juliets-MacBook-Air:my_django_project juliet$ pip install django
+-bash: /Users/juliet/Desktop/Coding/How to Build a Web App Class/my_django_project/env/bin/pip: "/Users/juliet/Desktop/Coding/How: bad interpreter: No such file or directory
+(env) Juliets-MacBook-Air:my_django_project juliet$ ls
+env		requirement.txt
+(env) Juliets-MacBook-Air:my_django_project juliet$ source env/bin/activate
+(env) Juliets-MacBook-Air:my_django_project juliet$ pip install django
+-bash: /Users/juliet/Desktop/Coding/How to Build a Web App Class/my_django_project/env/bin/pip: "/Users/juliet/Desktop/Coding/How: bad interpreter: No such file or directory
+(env) Juliets-MacBook-Air:my_django_project juliet$ pip3 install django
+Collecting django
+  Using cached Django-1.10.5-py2.py3-none-any.whl
+Installing collected packages: django
+Successfully installed django-1.10.5
+(env) Juliets-MacBook-Air:my_django_project juliet$ django-admin startproject project
+(env) Juliets-MacBook-Air:my_django_project juliet$ ls
+env		project		requirement.txt
+(env) Juliets-MacBook-Air:my_django_project juliet$ cd project/
+(env) Juliets-MacBook-Air:project juliet$ ls
+manage.py	project
+(env) Juliets-MacBook-Air:project juliet$ python manage.py migrate
+Traceback (most recent call last):
+  File "manage.py", line 17, in <module>
+    "Couldn't import Django. Are you sure it's installed and "
+ImportError: Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable? Did you forget to activate a virtual environment?
+(env) Juliets-MacBook-Air:project juliet$ python3 manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying sessions.0001_initial... OK
+(env) Juliets-MacBook-Air:project juliet$ python3 manage.py runserver
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 07, 2017 - 00:17:46
+Django version 1.10.5, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[07/Feb/2017 00:18:01] "GET / HTTP/1.1" 200 1767
+Not Found: /favicon.ico
+[07/Feb/2017 00:18:01] "GET /favicon.ico HTTP/1.1" 404 1937
+
+^C(env) Juliets-MacBook-Air:project juliet$ python3 manage.py startapp posts
+(env) Juliets-MacBook-Air:project juliet$ ls
